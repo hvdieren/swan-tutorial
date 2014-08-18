@@ -191,7 +191,7 @@ v_atomic_decr_long( volatile uint32_t * address ) {
 }
 
 // Auxiliary
-#if __GNUC__ < 4 || ( __GNUC__ == 4 && __GNUC_MINOR__ < 9 )
+#if __GNUC__ < 4 || ( __GNUC__ == 4 && __GNUC_MINOR__ < 8 )
 template<typename T>
 struct my_is_trivially_destructible : std::has_trivial_destructor<T> { };
 #else
